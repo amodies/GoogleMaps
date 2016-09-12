@@ -52,6 +52,7 @@ https://jsfiddle.net/amodies/b1597ox2/
 			  Cherry: {center: {lat: 38.3799, lng: -121.95657}, alias: 'Anthony Cherry'}
 			};
 
+			window.onload = function() {
 			function initMap() {
 			  // Create the map.
 			  var map = new google.maps.Map(document.getElementById('map'), {
@@ -92,7 +93,14 @@ https://jsfiddle.net/amodies/b1597ox2/
 			}
 
 			function geocodeAddress(geocoder, resultsMap) {
-			  var address = '5020 Weston Pkwy Cary, NC 27513'
+			  //var address = '5020 Weston Pkwy Cary, NC 27513'
+			  var address = function(){
+			  	address = "";
+			  	address += document.getElementById("A0.R0.Custom Object 2 Name").title;
+				address += " " + document.getElementById("A0.R0.ZText_35").title;
+				address += " " + document.getElementById("A0.R0.ZText_36").title + ",";
+				address += " " + document.getElementById("A0.R0.ZText_38").title;
+			  }
 			  geocoder.geocode({'address': address}, function(results, status) {
 				if (status === 'OK') {
 				  resultsMap.setCenter(results[0].geometry.location);
@@ -106,6 +114,7 @@ https://jsfiddle.net/amodies/b1597ox2/
 				}
 			  });
 			}
+			};
 		</script>
 		<script async defer
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpI8ywHqKFDDns3j7LZv-CX1FNFoHvhdY&callback=initMap">
