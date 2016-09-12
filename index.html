@@ -94,10 +94,10 @@ https://jsfiddle.net/amodies/b1597ox2/
 			function geocodeAddress(geocoder, resultsMap) {
 			  //var address = '5020 Weston Pkwy Cary, NC 27513';
 			  var address = "";
-			  address += document.getElementById("A0.R0.Custom Object 2 Name").innerHTML;
-			  address += document.getElementById("A0.R0.ZText_35").innerHTML;
-			  address += document.getElementById("A0.R0.ZText_36").innerHTML;
-			  address += document.getElementById("A0.R0.ZText_38").innerHTML;
+			  address += %%%Custom_Object_2_Name%%% + " ";
+			  address += %%%stHomeowner_City%%% + " ";
+			  address += %%%stHomeowner_State%%% + " ";
+			  address += %%%stHomeowner_Zip%%%;
 			  geocoder.geocode({'address': address}, function(results, status) {
 				if (status === 'OK') {
 				  resultsMap.setCenter(results[0].geometry.location);
