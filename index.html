@@ -61,12 +61,12 @@ https://jsfiddle.net/amodies/b1597ox2/
 				center: {lat: 37.090, lng: -95.712},
 				mapTypeId: 'roadmap'
 			  }); 
-			  var address = function address(){
+			  var address = function buildAddress(){
 			  	var address = "";
-			  	address += oraclecrmod.getField("Custom Object 2 Name").getValue();
-			  	address += " " + oraclecrmod.getField("ZText_35").getValue();
-			  	address += " " + oraclecrmod.getField("ZText_36").getValue() + ",";
-			  	address += " " + oraclecrmod.getField("ZText_38").getValue();
+			  	address += document.getElementById("Custom Object 2 Name").innerHTML;
+			  	address += " " + document.getElementById("ZText_35").innerHTML;
+			  	address += " " + document.getElementById("ZText_36").innerHTML + ",";
+			  	address += " " + document.getElementById("ZText_38").innerHTML;
 			  }
 			  var icon = {
 					url: 'https://www.simonton.com/wp-content/themes/simonton-theme/assets/img/s-logo-old.svg',
