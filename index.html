@@ -1,3 +1,9 @@
+<!--
+https://jsfiddle.net/amodies/b1597ox2/
+-->
+
+
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
@@ -87,7 +93,10 @@
 
 			function geocodeAddress(geocoder, resultsMap) {
 			  //var address = '5020 Weston Pkwy Cary, NC 27513'
-			  var address = prompt("Please enter your address");
+			  var address += document.getElementById("A0.R0.Custom Object 2 Name").innerHTML;
+			  address += document.getElementById("A0.R0.ZText_35").innerHTML;
+			  address += document.getElementById("A0.R0.ZText_36").innerHTML;
+			  address += document.getElementById("A0.R0.ZText_38").innerHTML;
 			  geocoder.geocode({'address': address}, function(results, status) {
 				if (status === 'OK') {
 				  resultsMap.setCenter(results[0].geometry.location);
