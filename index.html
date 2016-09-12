@@ -60,20 +60,18 @@ https://jsfiddle.net/amodies/b1597ox2/
 				zoom: 7,
 				center: {lat: 37.090, lng: -95.712},
 				mapTypeId: 'roadmap'
-			  }); 
-			  var address = function buildAddress(){
-			  	var address = "";
-			  	address += document.getElementById("Custom Object 2 Name").innerHTML;
-			  	address += " " + document.getElementById("ZText_35").innerHTML;
-			  	address += " " + document.getElementById("ZText_36").innerHTML + ",";
-			  	address += " " + document.getElementById("ZText_38").innerHTML;
-			  }
-			  var icon = {
-					url: 'https://www.simonton.com/wp-content/themes/simonton-theme/assets/img/s-logo-old.svg',
-					scaledSize: new google.maps.Size(30, 30), // scaled size
-					origin: new google.maps.Point(0, 0), // origin
-					anchor: new google.maps.Point(15, 15) // anchor
-			   };
+			}); 
+			var address = "";
+		  	address += document.getElementById("A0.R0.Custom Object 2 Name").title;
+			address += " " + document.getElementById("A0.R0.ZText_35").title;
+			address += " " + document.getElementById("A0.R0.ZText_36").title + ",";
+			address += " " + document.getElementById("A0.R0.ZText_38").title;
+			var icon = {
+				url: 'https://www.simonton.com/wp-content/themes/simonton-theme/assets/img/s-logo-old.svg',
+				scaledSize: new google.maps.Size(30, 30), // scaled size
+				origin: new google.maps.Point(0, 0), // origin
+				anchor: new google.maps.Point(15, 15) // anchor
+			};
 
 			  // Construct the circle for each technician's territory.
 			  // Note: We scale the area of the circle based on a radius of 175 miles.
