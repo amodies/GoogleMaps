@@ -20,9 +20,7 @@ https://jsfiddle.net/amodies/b1597ox2/
 		</style>
 	<body>
 		<div id="map"></div>
-		<script>
-			window.onload = function(){
-			
+				<script>
 			// Create an overlap with geocoded longitude and latitude Simonton tech addresses.  Will show a radius of 175 miles from address.
 			// Create the supplier list.
 			var techs = {
@@ -60,13 +58,13 @@ https://jsfiddle.net/amodies/b1597ox2/
 				zoom: 7,
 				center: {lat: 37.090, lng: -95.712},
 				mapTypeId: 'roadmap'
-			}); 
-			var icon = {
-				url: 'https://www.simonton.com/wp-content/themes/simonton-theme/assets/img/s-logo-old.svg',
-				scaledSize: new google.maps.Size(30, 30), // scaled size
-				origin: new google.maps.Point(0, 0), // origin
-				anchor: new google.maps.Point(15, 15) // anchor
-			};
+			  }); 
+			  var icon = {
+					url: 'https://www.simonton.com/wp-content/themes/simonton-theme/assets/img/s-logo-old.svg',
+					scaledSize: new google.maps.Size(30, 30), // scaled size
+					origin: new google.maps.Point(0, 0), // origin
+					anchor: new google.maps.Point(15, 15) // anchor
+			   };
 
 			  // Construct the circle for each technician's territory.
 			  // Note: We scale the area of the circle based on a radius of 175 miles.
@@ -94,15 +92,7 @@ https://jsfiddle.net/amodies/b1597ox2/
 			}
 
 			function geocodeAddress(geocoder, resultsMap) {
-			  var address = '5020 Weston Pkwy Cary, NC 27513';
-			  /*var address =  function(){
-  				address = "";
-			  	address += document.getElementById("A0.R0.Custom Object 2 Name").title;
-				address += " " + document.getElementById("A0.R0.ZText_35").title;
-				address += " " + document.getElementById("A0.R0.ZText_36").title + ",";
-				address += " " + document.getElementById("A0.R0.ZText_38").title;
-			  };*/
-			  alert(address);
+			  //var address = '5020 Weston Pkwy Cary, NC 27513'
 			  geocoder.geocode({'address': address}, function(results, status) {
 				if (status === 'OK') {
 				  resultsMap.setCenter(results[0].geometry.location);
@@ -116,7 +106,6 @@ https://jsfiddle.net/amodies/b1597ox2/
 				}
 			  });
 			}
-			};
 		</script>
 		<script async defer
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpI8ywHqKFDDns3j7LZv-CX1FNFoHvhdY&callback=initMap">
