@@ -92,7 +92,7 @@ https://jsfiddle.net/amodies/b1597ox2/
 			}
 
 			function geocodeAddress(geocoder, resultsMap) {
-			  //var address = '5020 Weston Pkwy Cary, NC 27513'
+			  var address = '5020 Weston Pkwy Cary, NC 27513'
 			  geocoder.geocode({'address': address}, function(results, status) {
 				if (status === 'OK') {
 				  resultsMap.setCenter(results[0].geometry.location);
