@@ -92,14 +92,14 @@ https://jsfiddle.net/amodies/b1597ox2/
 			}
 
 			function geocodeAddress(geocoder, resultsMap) {
-			  //var address = '5020 Weston Pkwy Cary, NC 27513'
-			  var address = function(){
+			  var address = '5020 Weston Pkwy Cary, NC 27513'
+			  /*var address = function(){
 			  	address = "";
 			  	address += document.getElementById("A0.R0.Custom Object 2 Name").title;
 				address += " " + document.getElementById("A0.R0.ZText_35").title;
 				address += " " + document.getElementById("A0.R0.ZText_36").title + ",";
 				address += " " + document.getElementById("A0.R0.ZText_38").title;
-			  }
+			  }*/
 			  geocoder.geocode({'address': address}, function(results, status) {
 				if (status === 'OK') {
 				  resultsMap.setCenter(results[0].geometry.location);
