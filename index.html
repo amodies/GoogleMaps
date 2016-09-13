@@ -51,7 +51,7 @@ https://jsfiddle.net/amodies/b1597ox2/
 			  Mellick: {center: {lat: 35.98248, lng: -79.35154}, alias: 'Bill Mellick'},
 			  Cherry: {center: {lat: 38.3799, lng: -121.95657}, alias: 'Anthony Cherry'}
 			};
-
+			
 			function initMap() {
 			  // Create the map.
 			  var map = new google.maps.Map(document.getElementById('map'), {
@@ -91,9 +91,14 @@ https://jsfiddle.net/amodies/b1597ox2/
 			  geocodeAddress(geocoder, map);
 			}
 
-			function geocodeAddress(geocoder, resultsMap) {
+			window.onload = function geocodeAddress(geocoder, resultsMap) {
 			  //var address = '5020 Weston Pkwy Cary, NC 27513'
-			  var address = addrStr();
+			  var address = function addrStr(){
+		              address = document.getElementById("A0.R0.Custom Object 2 Name").title;
+			      address += " " + document.getElementById("A0.R0.ZText_35").title;
+			      address += ", " + document.getElementById("A0.R0.ZText_36").title;
+			      address += " " + document.getElementById("A0.R0.ZText_38").title;
+			  }
 			  geocoder.geocode({'address': address}, function(results, status) {
 				if (status === 'OK') {
 				  resultsMap.setCenter(results[0].geometry.location);
